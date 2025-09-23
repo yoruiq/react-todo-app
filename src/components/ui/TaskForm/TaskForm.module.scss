@@ -1,0 +1,9 @@
+@import '../../../style/utils/variables';
+
+.taskform {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 600px;
+}

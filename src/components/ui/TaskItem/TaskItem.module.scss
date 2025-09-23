@@ -1,0 +1,10 @@
+@import '../../../style/utils/variables';
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 600px;
+    border: 1px solid teal;
+    padding: $padding;
+    align-items: center;  
+}

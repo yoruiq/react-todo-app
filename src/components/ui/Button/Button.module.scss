@@ -1,0 +1,50 @@
+@import '../../../style/utils/variables';
+
+.button {
+    padding: $padding;
+    border-radius: $border-radius;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+
+    &.primary {
+        background-color: $primary-color;
+        color: white;
+    }
+
+    &.hover {
+        background-color: darken($primary-color, 10%);
+    }
+
+    &.secondary {
+        background-color: $secondary-color;
+        color: white;
+    }
+
+    &.danger {
+        background-color: $danger-color;
+        color: white 
+    }
+
+    &.success {
+        background-color: $success_color;
+        color: white
+    }  
+
+    &.all:focus {
+        background-color: $success_color;
+    }
+
+    &.active:focus {
+        background-color: $success_color;
+    }
+
+    &.completed:focus {
+        background-color: $success_color;
+    }
+}
+
+.button:hover {
+    opacity: 0.6;
+}

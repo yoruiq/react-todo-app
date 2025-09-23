@@ -1,0 +1,21 @@
+@import 'utils/variables';
+@import 'utils/mixins';
+@import 'components/button';
+@import 'components/inputs';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.App {
+    display: flex;
+    margin: 10px;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
