@@ -6,9 +6,10 @@ import { useState } from "react";
 
 interface TaskFormProps {
   onAddTask: (title: string) => void;
+  theme: "dark" | "light"
 }
 
-export default function TaskForm({ onAddTask }: TaskFormProps) {
+export default function TaskForm({ onAddTask, theme }: TaskFormProps) {
 
   const [inputValue, setInputValue] = useState<string>("");
 
@@ -24,17 +25,17 @@ export default function TaskForm({ onAddTask }: TaskFormProps) {
   };
 
   return (
-    <div className={styles.taskform}>
-      <Input
-        type="text"
-        variant="primary"
-        value={inputValue}
-        onChange={handleInputChange}
-        placeholder="Напиши задачу"
-      />
-      <Button  filtertype='all' variant="primary" type="button" onClick={handleSubmit}>
-        Создать задачу
-      </Button>
-    </div>
+      <div className={`${styles.taskform} ${styles[theme]}`}>
+        <Input
+          type="text"
+          variant="primary"
+          value={inputValue}
+          onChange={handleInputChange}
+          placeholder="Напиши задачу"
+        />
+        <Button  filtertype='basic' variant="primary" type="button" onClick={handleSubmit} theme={theme}>
+          Создать задачу
+        </Button>
+      </div>
   );
 }

@@ -6,4 +6,14 @@
     align-items: center;
     gap: 10px;
     width: 600px;
+    background: $bg-secondary;
+    color: $text-primary;
+    border: 1px solid $border-color;
+    border-radius: $border-radius;
+
+    &.dark {
+        background: $bg-secondary-dark;
+        color: $text-primary-dark;
+        border-color: $border-color-dark;
+    }
 }

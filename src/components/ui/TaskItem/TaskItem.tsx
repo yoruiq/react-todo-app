@@ -11,6 +11,7 @@ interface TaskItemProps {
   onToggle: (TaskId: number) => void
   id: number;
   completed: boolean;
+  theme: "dark" | "light"
 }
 
 export default function TaskItem({
@@ -19,16 +20,18 @@ export default function TaskItem({
   onToggle,
   id,
   completed,
-  index
+  index,
+  theme
 }: TaskItemProps) {
   return (
     <div>
-      <div className={styles.container}>
+      <div className={`${styles.taskitem} ${styles[theme]}`}>
         <div className="index">{index + 1}</div>
         <Input type="checkbox" checked={completed} onChange={() => onToggle(id)} />
         <div className="task">{name}</div>
         <Button
-          filtertype="all"
+          theme={theme}
+          filtertype="basic"
           variant={"primary"}
           type={"button"}
           onClick={() => onDelete(id)}

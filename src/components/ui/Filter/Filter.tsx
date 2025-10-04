@@ -6,12 +6,14 @@ import styles from "./Filter.module.scss";
 interface FilterProps {
   currentFilter: string;
   onFilterChange: (filter: "all" | "active" | "completed") => void;
+  theme: "dark" | "light"
 }
 
-export default function Filter({ currentFilter, onFilterChange }: FilterProps) {
+export default function Filter({ currentFilter, onFilterChange, theme }: FilterProps) {
   return (
     <div className={styles.filter}>
       <Button
+      theme={theme}
         variant={currentFilter === "all" ? "success" : "secondary"}
         type={"button"}
         filtertype="all"
@@ -20,6 +22,7 @@ export default function Filter({ currentFilter, onFilterChange }: FilterProps) {
         Все
       </Button>
       <Button
+      theme={theme}
         variant={currentFilter === "active" ? "success" : "secondary"}
         type={"button"}
         filtertype="active"
@@ -28,6 +31,7 @@ export default function Filter({ currentFilter, onFilterChange }: FilterProps) {
         Активные
       </Button>
       <Button
+      theme={theme}
         variant={currentFilter === "completed" ? "success" : "secondary"}
         type={"button"}
         filtertype="completed"

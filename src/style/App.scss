@@ -9,13 +9,29 @@
     box-sizing: border-box;
 }
 
+#root {
+    display: flex;
+    justify-content: center;
+}
+
+body {
+  background: $bg-primary;
+  color: $text-primary;
+  transition: all 0.3s ease;
+
+  &.dark {
+    background: $bg-primary-dark;
+    color: $text-primary-dark;
+  }
+}
+
 .App {
     display: flex;
     margin: 10px;
     gap: 10px;
     align-items: center;
-    justify-content: center;
     flex-direction: column;
+    max-width: 600px;
 }
 
 

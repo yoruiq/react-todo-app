@@ -9,7 +9,7 @@
     transition: background-color 0.3s ease;
 
     &.primary {
-        background-color: $primary-color;
+        background: $primary-color;
         color: white;
     }
 
@@ -33,15 +33,40 @@
     }  
 
     &.all:focus {
-        background-color: $success_color;
+        background: $success_color;
+
+        &.dark {
+            background: $bg-secondary-dark;
+            color: white;
+            border: $border-color-dark solid 1px;
+        }
     }
 
     &.active:focus {
-        background-color: $success_color;
+        background: $success_color;
+
+        &.dark {
+            background: $bg-secondary-dark;
+            color: white;
+            border: $border-color-dark solid 1px;
+        }
     }
 
     &.completed:focus {
-        background-color: $success_color;
+        background: $success_color;
+
+        &.dark {
+            background: $bg-secondary-dark;
+            color: white;
+            border: $border-color-dark solid 1px;
+        }
+    }
+
+    &.dark {
+        background: $text-primary-dark;
+        border: $border-color-dark solid 1px;
+        color: $text-secondary;
+        border-color: $border-color-dark;
     }
 }
 
